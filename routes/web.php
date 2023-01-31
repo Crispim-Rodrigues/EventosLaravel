@@ -26,3 +26,12 @@ Route::get('/events/{id}', [EventController::class, 'show']);
 //     $id = request('categoria');
 //     return "Categoria: $id";
 // });
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
