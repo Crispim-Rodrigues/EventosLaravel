@@ -24,7 +24,7 @@
                 <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento..." required>
             </div>
             <div class="form-group">
-                <label for="private">Evento:</label>
+                <label for="private">Evento privado?</label>
                 <select name="private" id="private" class="form-control" required>
                     <option value="0">Não</option>
                     <option value="1">Sim</option>
@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label for="title">Descrição:</label>
-                <textarea name="description" id="description" class="form-control" placeholder="Descrição do evento..."></textarea required>
+                <textarea name="description" id="description" class="form-control" placeholder="Descrição do evento..." required></textarea >
             </div>
             <div class="form-group">
                 <label for="items">Adicione itens de infraestrutura:</label>
