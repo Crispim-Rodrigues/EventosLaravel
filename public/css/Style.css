@@ -200,3 +200,12 @@ footer p{
 #items-list li {
     display: flex;
 }
+
+/* DashBoard */
+
+.dashboard-title-container{
+    margin: 30px 0;
+}
+.dashboard-events-container th{
+    width: 25%;
+}

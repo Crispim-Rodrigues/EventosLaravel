@@ -20,18 +20,11 @@ Route::view('/contact', 'contact');
 Route::post('/events', [EventController::class, 'store']);
 Route::get('/events/{id}', [EventController::class, 'show']);
 
+Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');
+
 
 // Route::get('/eventos', function ($id = 'indefinido') {
 //     // eventos?categoria=id
 //     $id = request('categoria');
 //     return "Categoria: $id";
 // });
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
