@@ -140,7 +140,7 @@ class EventController extends Controller
 
         $event = Event::findOrFail($id);
 
-        return redirect('/dashboard')->with('msg', 'Sua presença foi confirmada no evento'.$event->title);
+        return redirect('/dashboard')->with('msg', 'Sua presença foi confirmada no evento: '.$event->title);
     }
 
     public function leaveEvent($id)
@@ -151,6 +151,6 @@ class EventController extends Controller
 
         $event = Event::findOrFail($id);
 
-        return redirect('/dashboard')->with('msg', 'Você saiu do evento'.$event->title);
+        return redirect('/dashboard')->with('msg', 'Você saiu do evento: '.$event->title);
     }
 }
